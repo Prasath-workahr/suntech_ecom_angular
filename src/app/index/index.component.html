@@ -1,0 +1,58 @@
+<div class="login-pg-bg">
+	<div class="signup">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-wrap">
+					<div class="card p-4" style="width: 25rem;">
+						<div class="card-body">
+							<img src="assets/logo.png" width="300px" class="mx-auto mb-3" />
+							<h3 class="text-center mb-3"><b>Login</b></h3>
+							<form #loginForm="ngForm" class="ajaxForm">
+								<div class="form-floating mb-3">
+									<input type="text" class="form-control" id="username" [(ngModel)]="username" name="username"
+										(blur)="onUsernameBlur()" required style="text-transform: uppercase;color: black;" />
+									<label for="username">Username</label>
+								</div>
+
+								<div class="form-floating mb-3">
+									<input type="password" class="form-control" id="password" [(ngModel)]="password" name="password"
+										[disabled]="!isPasswordEnabled" (blur)="onPasswordBlur()" required style="color: black;"/>
+									<label for="password">Password</label>
+								</div>
+
+								<div class="form-floating mb-3">
+									<select class="form-select" [(ngModel)]="selectedBranch" name="branch" id="branch"
+										[disabled]="!isBranchEnabled" (change)="onBranchChange()" required>
+										<option value="">Select Branch</option>
+										<option *ngFor="let b of branches" [value]="b.BRANCH_CODE">{{ b.BRANCH_CODE }}</option>
+									</select>
+									<label for="branch">Branch</label>
+								</div>
+
+								<div class="form-floating mb-3">
+									<select class="form-select" [(ngModel)]="selectedYear" name="year" id="fin_year"
+										[disabled]="!isYearEnabled" required>
+										<option value="">Select Year</option>
+										<option *ngFor="let y of financialYears" [value]="y.fyearcode">{{ y.fyearcode }}</option>
+									</select>
+									<label for="fin_year">Year</label>
+								</div>
+
+								<div class="text-center">
+									<button class="btn btn-primary w-100" type="submit" (click)="onSubmit()">Login</button>
+								</div>
+							</form>
+							<div class="text-center mt-3">
+								<p>Copyright © 2025</p>
+							</div>
+							</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+</div>
+	</div>
+
+

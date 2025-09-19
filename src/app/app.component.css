@@ -1,0 +1,25 @@
+#toast-container > .toast {
+		background-color: #333;
+		color: #fff;
+	}
+
+	#toast-container > .toast-success {
+		background-color: #28a745;
+	}
+
+	#toast-container > .toast-error {
+		background-color: #dc3545;
+	}
+
+	#toast-container > .toast-info {
+		background-color: #17a2b8;
+	}
+
+	#toast-container > .toast-warning {
+		background-color: #1785b8;
+		color: #000;
+	}
+
+	#toast-container > .toast .toast-progress {
+		background-color: #3478b0; /* or any color you want for the progress bar */
+	}
